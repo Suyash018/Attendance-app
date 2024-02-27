@@ -8,13 +8,13 @@ import {
   Image
 } from "react-native";
 import React, {useState} from "react";
-import * as ImagePicker from 'expo-image-picker';
+//import * as ImagePicker from 'expo-image-picker';
 
 
 const UserInfo = () => {
-  const [image, setImage] = useState(null);
+  //const [image, setImage] = useState(null);
 
-  const pickImage = async () => {
+ /* const pickImage = async () => {
     // No permissions request is necessary for launching the image library
     let result = await ImagePicker.launchImageLibraryAsync({
       mediaTypes: ImagePicker.MediaTypeOptions.All,
@@ -28,10 +28,9 @@ const UserInfo = () => {
     if (!result.canceled) {
       setImage(result.assets[0].uri);
     }
-  };
+  }; */
 
-  return (
-    <SafeAreaView style={styles.container}>
+      /*  
       <View style={ styles.centered }>
       {image && (
           <Image source={{ uri: image }} style={{ width: 200, height: 200}} />
@@ -40,11 +39,27 @@ const UserInfo = () => {
         <Button title="Select Image" style={{padding:20}} onPress={pickImage} />
       </View>
 
+      */
+  
+
+  return (
+    <SafeAreaView style={styles.container}>
+
+      <View style={styles.centered}>
+        <Text style={{ fontSize: 30 }}>Nick Name</Text>
+        <View style={styles.contai}>
+          <TextInput
+            placeholder="Nick Name"
+            style={{ fontSize: 20 }}
+          ></TextInput>
+        </View>
+        </View>
+
       <View style={styles.centered}>
         <Text style={{ fontSize: 30 }}>Name</Text>
         <View style={styles.contai}>
           <TextInput
-            placeholder="Username"
+            placeholder="Name"
             style={{ fontSize: 20 }}
           ></TextInput>
         </View>
